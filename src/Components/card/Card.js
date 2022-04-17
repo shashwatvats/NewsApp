@@ -1,8 +1,8 @@
 import React from "react";
 
 function Card(props) {
-  const addToReadLater = (url, author, title, description) => {
-    props.onAddToReadLater({ url, author, title, description });
+  const addToReadLater = (url, author, title, description, urlToSource) => {
+    props.onAddToReadLater({ url, author, title, description, urlToSource });
   };
   return (
     <div>
@@ -22,7 +22,8 @@ function Card(props) {
               props.url,
               props.author,
               props.title,
-              props.description
+              props.description,
+              props.urlToSource
             )}
             className="btn btn-info"
             id="readLater"
@@ -32,8 +33,9 @@ function Card(props) {
               border: "none",
             }}
           >
-            Read Later <i class="far fa-bookmark"></i>
+            Read Later <i className="far fa-bookmark"></i>
           </button>
+          <button className="btn btn-primary btn-sm mt-2" onClick={() => (window.location.href = props.urlToSource)}>Go To Source ...</button>
         </div>
       </div>
     </div>

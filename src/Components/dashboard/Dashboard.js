@@ -112,7 +112,7 @@ export default function Dashboard() {
   // }
   const onAddToReadLater = (data) => {
     console.log(data);
-    fetch("http://localhost:3001/api/v1/news", {
+    fetch("http://localhost:3001/news", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -122,6 +122,7 @@ export default function Dashboard() {
         author: data.author,
         title: data.title,
         description: data.description,
+        urlToSource: data.urlToSource
       }),
     })
       .then((res) => setOpen(true))
@@ -147,28 +148,28 @@ export default function Dashboard() {
       </Button>
       {/* Modal */}
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">
                 Select From Below Categories
               </h5>
               <button
                 type="button"
                 id="btnClose"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
-              <div class="accordion" id="accordionExample">
+            <div className="modal-body">
+              <div className="accordion" id="accordionExample">
                 <input
                   type="number"
                   onChange={(e) => setpageSize(e.target.value)}
@@ -180,16 +181,16 @@ export default function Dashboard() {
                   <button
                     onClick={searchPageSize}
                     type="button"
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                   >
                     Search
                     <br />
                   </button>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingOne">
                     <button
-                      class="accordion-button"
+                      className="accordion-button"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseOne"
@@ -201,11 +202,11 @@ export default function Dashboard() {
                   </h2>
                   <div
                     id="collapseOne"
-                    class="accordion-collapse collapse show"
+                    className="accordion-collapse collapse show"
                     aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample"
                   >
-                    <div class="accordion-body">
+                    <div className="accordion-body">
                       <input
                         className="ms-2 me-1"
                         type="radio"
@@ -335,7 +336,7 @@ export default function Dashboard() {
                           id="search"
                           // style={{ display: "block" }}
                           type="button"
-                          class="btn btn-primary"
+                          className="btn btn-primary"
                         >
                           Search
                           <br />
@@ -344,10 +345,10 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingTwo">
                     <button
-                      class="accordion-button collapsed"
+                      className="accordion-button collapsed"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseTwo"
@@ -359,11 +360,11 @@ export default function Dashboard() {
                   </h2>
                   <div
                     id="collapseTwo"
-                    class="accordion-collapse collapse"
+                    className="accordion-collapse collapse"
                     aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample"
                   >
-                    <div class="accordion-body">
+                    <div className="accordion-body">
                       <input
                         className="ms-2 me-1"
                         type="radio"
@@ -420,7 +421,7 @@ export default function Dashboard() {
                           onClick={searchCategory}
                           // style={{ display: "block" }}
                           type="button"
-                          class="btn btn-primary"
+                          className="btn btn-primary"
                         >
                           Search
                           <br />
@@ -429,10 +430,10 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingThree">
                     <button
-                      class="accordion-button collapsed"
+                      className="accordion-button collapsed"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseThree"
@@ -444,17 +445,17 @@ export default function Dashboard() {
                   </h2>
                   <div
                     id="collapseThree"
-                    class="accordion-collapse collapse"
+                    className="accordion-collapse collapse"
                     aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample"
                   >
-                    <div class="accordion-body">
+                    <div className="accordion-body">
                       <TextField id="keyword" label="Enter Keyword" />
                       <div className="text-center mt-2">
                         <button
                           onClick={searchKeyword}
                           type="button"
-                          class="btn btn-primary"
+                          className="btn btn-primary"
                         >
                           Search
                           <br />
@@ -463,10 +464,10 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingFour">
                     <button
-                      class="accordion-button collapsed"
+                      className="accordion-button collapsed"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseFour"
@@ -478,11 +479,11 @@ export default function Dashboard() {
                   </h2>
                   <div
                     id="collapseFour"
-                    class="accordion-collapse collapse"
+                    className="accordion-collapse collapse"
                     aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample"
                   >
-                    <div class="accordion-body">
+                    <div className="accordion-body">
                       <TextField
                         id="sources"
                         type="text"
@@ -492,7 +493,7 @@ export default function Dashboard() {
                         <button
                           onClick={searchSources}
                           type="button"
-                          class="btn btn-primary"
+                          className="btn btn-primary"
                         >
                           Search
                           <br />
@@ -501,10 +502,10 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </div>
-                {/* <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFive">
+                {/* <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingFive">
                     <button
-                      class="accordion-button collapsed"
+                      className="accordion-button collapsed"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseFive"
@@ -516,11 +517,11 @@ export default function Dashboard() {
                   </h2>
                   <div
                     id="collapseFive"
-                    class="accordion-collapse collapse"
+                    className="accordion-collapse collapse"
                     aria-labelledby="headingFive"
                     data-bs-parent="#accordionExample"
                   >
-                    <div class="accordion-body"></div>
+                    <div className="accordion-body"></div>
                   </div>
                 </div> */}
               </div>
@@ -536,14 +537,14 @@ export default function Dashboard() {
         onClick={logout}
         color="secondary"
       >
-        Logout <i style={{ marginLeft: "3px" }} class="fas fa-sign-out-alt"></i>
+        Logout <i style={{ marginLeft: "3px" }} className="fas fa-sign-out-alt"></i>
       </Button>
       <div className="row ms-2 mt-3" data-testid="divcontainerrow">
         {news.map((item) => (
-          <div className="col-md-3">
+          <div key={uuidv4()} className="col-md-3">
             <Card
               onAddToReadLater={onAddToReadLater}
-              key={uuidv4()}
+              urlToSource={item.url}
               url={item.urlToImage}
               title={item.title}
               author={item.source.name}

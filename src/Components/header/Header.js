@@ -60,7 +60,7 @@ function Header(props) {
                   style={{ color: "white" }}
                   className="nav-link btn btn-primary"
                 >
-                  Login <i class="fas fa-sign-in-alt"></i>
+                  Login <i className="fas fa-sign-in-alt"></i>
                 </Link>
               </li>
               <li className="nav-item">

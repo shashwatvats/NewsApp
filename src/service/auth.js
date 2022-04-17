@@ -1,5 +1,5 @@
 const authentication = {
-  isLoggedin: false,
+  isLoggedin: true,
   async Login() {
     await fetch(" http://localhost:3001/auth/v1/isAuthenticated", {
       method: "POST",

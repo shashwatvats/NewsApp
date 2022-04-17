@@ -11,7 +11,7 @@ import authentication from "./service/auth";
 function App() {
   const [titleName, settitleName] = useState("");
   function check() {
-    authentication.Login();
+    // authentication.Login();
     return authentication.isLoggedin;
   }
 
