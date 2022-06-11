@@ -7,6 +7,7 @@ import Login from "./Components/login/Login";
 import Register from "./Components/register/Register";
 import ReadNow from "./Components/readNow/ReadNow";
 import authentication from "./service/auth";
+import { AppState } from "./Context/Context";
 
 function App() {
   const [titleName, settitleName] = useState("");
@@ -17,26 +18,28 @@ function App() {
 
   return (
     <div>
-      <Router>
-        <Header titleName={titleName} />
-        <Route
-          exact
-          path="/"
-          component={() => <Login settitleName={settitleName} />}
-        />
-        <Route exact path="/register" component={Register} />
-        <Route
-          exact
-          path="/dashboard"
-          component={() => (check() ? <Dashboard /> : <Redirect to="/" />)}
-        />
-        <Route
-          exact
-          path="/readnow"
-          component={() => (check() ? <ReadNow /> : <Redirect to="/" />)}
-        />
-        <Footer />
-      </Router>
+      <AppState>
+        <Router>
+          <Header titleName={titleName} />
+          <Route
+            exact
+            path="/"
+            component={() => <Login settitleName={settitleName} />}
+          />
+          <Route exact path="/register" component={Register} />
+          <Route
+            exact
+            path="/dashboard"
+            component={() => (check() ? <Dashboard /> : <Redirect to="/" />)}
+          />
+          <Route
+            exact
+            path="/readnow"
+            component={() => (check() ? <ReadNow /> : <Redirect to="/" />)}
+          />
+          <Footer />
+        </Router>
+      </AppState>
     </div>
   );
 }

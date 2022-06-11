@@ -1,22 +1,6 @@
 {
   "news": [
     {
-      "url": "https://www.pinkvilla.com/files/styles/fbimagesection/public/live_0.jpg?itok=6Mhv-tMk",
-      "author": "PINKVILLA",
-      "title": "Ranbir Kapoor-Alia Bhatt Wedding Bash PICS LIVE Updates: Karisma Kapoor, Arjun Kapoor, Malaika & others arrive - PINKVILLA",
-      "description": "Alia Bhatt and Ranbir Kapoor's marriage and mehendi photos are going viral on social media. As they gear up for their wedding reception, we bring you all the live updates from inside photos to videos of who's who of Bollywood who may attend.",
-      "urlToSource": "https://www.pinkvilla.com/entertainment/news/ranbir-kapoor-alia-bhatt-wedding-reception-photos-and-videos-live-updates-1069231",
-      "id": 6
-    },
-    {
-      "url": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202204/delhi_riots_1-647x363.jpeg?VDsp2.eXSgzC01j.q4S37DQ5w_A5itX8",
-      "author": "India Today",
-      "title": "Stone pelting, arson at Hanuman Jayanti rally, Delhi Police says situation under control - India Today",
-      "description": "A clash erupted between two groups during the Hanuman Jayanti procession in Delhi's Jahangir Puri. The Delhi Police said that the situation is under control.",
-      "urlToSource": "https://www.indiatoday.in/india/story/violence-breaks-out-during-hanuman-jayanti-procession-delhi-jahangir-puri-1938346-2022-04-16",
-      "id": 7
-    },
-    {
       "url": "https://c.ndtvimg.com/2021-12/2co7m9f8_delhi-covid-testing-ani-650_650x400_30_December_21.jpg",
       "author": "NDTV News",
       "title": "Delhi Covid Positivity Up 26% Since Yesterday; 461 New Cases, 2 Deaths - NDTV",
@@ -47,6 +31,30 @@
       "description": "Together, the couple's holding in Aptech has declined by 0.05% to 23.38% compared to the previous quarter's 23.43%.",
       "urlToSource": "https://www.livemint.com/market/stock-market-news/rakesh-jhunjhunwala-and-wife-rekha-trim-stakes-in-this-mumbai-based-firm-during-q4-11650111289818.html",
       "id": 11
+    },
+    {
+      "url": "https://images.hindustantimes.com/tech/img/2022/05/20/1600x900/iPhone_13_Mini_(2)_1633112418190_1653037660628.jpg",
+      "author": "Hindustan Times",
+      "title": "iPhone 14: Let us talk about this iPhone 13 successor, will it be WORTH buying? - HT Tech",
+      "description": "The iPhone 14 is expected to be announced sometime around September 2022 and prior to that, leaks have almost revealed everything. Here is what we know.",
+      "urlToSource": "https://tech.hindustantimes.com/tech/news/iphone-14-let-us-talk-about-this-iphone-13-successor-will-it-be-worth-buying-71653037583012.html",
+      "id": 12
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/photo/91684097/size-49076/91684097.jpg",
+      "author": "The Times of India",
+      "title": "Kangana Ranaut unveils her swanky new car worth Rs 3.6 crore at 'Dhaakad' premiere - Times of India",
+      "description": "Bollywood diva Kangana Ranaut recently hosted a premiere of her movie 'Dhaakad' and on the same occasion, the actress also unveiled her latest purchase which was a swanky new Mercedes Maybach S680. Her new ride is reportedly worth Rs 3.6 crore. Kangana was ac…",
+      "urlToSource": "https://timesofindia.indiatimes.com/videos/entertainment/hindi/kangana-ranaut-unveils-her-swanky-new-car-worth-rs-3-6-crore-at-dhaakad-premiere/videoshow/91684097.cms",
+      "id": 13
+    },
+    {
+      "url": "https://c.ndtvimg.com/2022-06/brug04vo_shaheen-afridi-806_625x300_11_June_22.jpg",
+      "author": "NDTV News",
+      "title": "Watch: How Shaheen Afridi Perfectly Set Up Shai Hope In Brilliant 1st Over - NDTV Sports",
+      "description": "PAK vs WI: Shaheen Afridi dismissed Shai Hope in the first over of West Indies' chase in the 2nd ODI.",
+      "urlToSource": "https://sports.ndtv.com/cricket/pakistan-vs-west-indies-how-shaheen-afridi-perfectly-set-up-shai-hope-in-brilliant-1st-over-watch-3057519",
+      "id": 14
     }
   ]
 }

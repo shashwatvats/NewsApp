@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "../card/Card";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -7,7 +7,9 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
+import { AppContext } from "../../Context/Context";
 export default function Dashboard() {
+  const { filterName, setfilterName } = useContext(AppContext);
   function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
   }
@@ -55,6 +57,7 @@ export default function Dashboard() {
     fetch(url_country)
       .then((res) => res.json())
       .then((data) => {
+        setfilterName((`Country - ${val}`).toUpperCase());
         setnews(data.articles);
         document.getElementById("btnClose").click();
       });
@@ -71,6 +74,7 @@ export default function Dashboard() {
     fetch(url_category)
       .then((res) => res.json())
       .then((data) => {
+        setfilterName((`Category - ${val}`).toUpperCase());
         setnews(data.articles);
         document.getElementById("btnClose").click();
       });
@@ -81,6 +85,7 @@ export default function Dashboard() {
     fetch(url_keyword)
       .then((res) => res.json())
       .then((data) => {
+        setfilterName((`Keyword - ${val}`).toUpperCase());
         setnews(data.articles);
         document.getElementById("btnClose").click();
       });
@@ -91,7 +96,7 @@ export default function Dashboard() {
     fetch(url_sources)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        setfilterName((`Source - ${val}`).toUpperCase());
         setnews(data.articles);
         document.getElementById("btnClose").click();
       });
@@ -146,6 +151,7 @@ export default function Dashboard() {
       >
         Filter
       </Button>
+      <span className="ml-3 font-weight-bold">(Filter Applied on {filterName})</span>
       {/* Modal */}
       <div
         className="modal fade"

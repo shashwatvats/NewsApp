@@ -1,11 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import authentication from "../../service/auth";
 import { useHistory } from "react-router-dom";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
+import { AppContext } from "../../Context/Context";
 function Login(props) {
+  const { filterName, setfilterName } = useContext(AppContext);
+  console.log(filterName);
   function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
   }
